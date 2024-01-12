@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>now food</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="" class="logo">
+                <img src="../images/logo1.png" alt="">
+            </a>
+            <div id="menu">
+                <div class="item">
+
+                    <a href="/user/home">Trang chủ</a>
+                </div>
+                <% if(user.length){ %>
+                <div class="item">
+                    <a href="/user/gioithieu">Giới Thiệu </a>
+                </div>
+                <div class="item">
+                    <a href="/user/sanpham">Sản Phẩm</a>
+                </div>
+                <div class="item">
+                    <a href="/user/lienhe">Liên hệ </a>
+                </div>
+                <div class="item">
+                    <a href="/user/status">status </a>
+                </div>
+            </div>
+            <div id="actions">
+                <div class="item">
+                    <a href="/user/cart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="item">
+                    <a href="/user/lichsu"><i class="fa-regular fa-file"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#" id="showChat"> <i class="fa-brands fa-facebook-messenger"></i></a>
+                  </div>
+                <div class="item">
+                    <a href="/user/hoso" ><i class="fa-regular fa-circle-user"></i></a>
+                </div>
+                <div class="item">
+                    <a href="/user/login" id="logoutLink"><i class="fa-solid fa-arrow-right-from-bracket"></i></i></a>
+                </div>
+                <div id="logoutConfirmation" class="confirmation">
+                    <p>Bạn có chắc chắn muốn đăng xuất?</p>
+                    <button id="confirmLogout">Đồng ý</button>
+                    <button id="cancelLogout">Hủy</button>
+                </div>
+            </div>
+            <%  } else { %>
+                <div class="item">
+                    <a href="/user/gioithieu">Giới Thiệu </a>
+                </div>
+            </div>
+                <div id="actions">
+                    <div class="item">
+                        <a href="/user/login" >đăng nhập </i></a>
+                    </div>
+                    <div class="item">
+                        <a href="/user/dangki" >đăng kí</i></a>
+                    </div>
+                    
+                </div>
+            <% } %>
+
+        </div>
+        <div id="banner">
+            <div class="box-left">
+                <h2>
+                    <span>THỨC ĂN SÁNG</span>
+                    <br>
+                    <span> TINH HOA VIỆT NAM</span>
+                </h2>
+                <p> Chuyên cung cấp các món ăn dinh dưỡng
+                    hợp vệ sinh đến người dùng,phục vụ người dùng một cách
+                    hoàn hảo nhất</p>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="box-right">
+                <img src="../images/a.png" alt="" class="img-short">
+                <img src="../images/b.png" alt="" class="img-tall">
+                <img src="../images/c.png" alt="" class="img-short">
+            </div>
+            <!-- <div class="to-bottom">
+                <a href="">
+                    <img src="/images/xuong.png">
+                </a>
+
+            </div> -->
+        </div>
+        <div id="wp-products">
+            <h2>SẢN PHẨM NỔI BẬT CỦA CHÚNG TÔI</h2>
+            <ul id="list-products">
+                <div class="item">
+                    <img src="../images/p1.png" alt="">
+                    <div class="name">
+                        Bánh mì chảo
+                    </div>
+                    <div class="desc"> Thơm ngon trên từng miếng ăn</div>
+                    <div class="price">35000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p2.png" alt="">
+                    <div class="name">
+                        Mì xào
+                    </div>
+                    <div class="desc"> Dai ngon từng sợi mì</div>
+                    <div class="price">30000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p3.png" alt="">
+                    <div class="name">
+                        Cháo ếch
+                    </div>
+                    <div class="desc"> Đậm đà vị ếch </div>
+                    <div class="price">60000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p4.png" alt="">
+                    <div class="name">
+                        Nem nướng
+                    </div>
+                    <div class="desc"> Thơm ngon từng cuốn nem </div>
+                    <div class="price">40000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p5.png" alt="">
+                    <div class="name">
+                        Bún hải sảb
+                    </div>
+                    <div class="desc"> Hải sản tươi sống,đậm vị </div>
+                    <div class="price">45000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p6.png" alt="">
+                    <div class="name">
+                        Phở bò
+                    </div>
+                    <div class="desc"> Thơm ngon từng sợi phở</div>
+                    <div class="price">35000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p7.png" alt="">
+                    <div class="name">
+                        Bánh mì
+                    </div>
+                    <div class="desc"> giòn từ vỏ,ngọt thơm nhân </div>
+                    <div class="price">20000VND </div>
+                </div>
+                <div class="item">
+                    <img src="../images/p1.png" alt="">
+                    <div class="name">
+                        Bún bò huế
+                    </div>
+                    <div class="desc"> Dai ngòn từng sợi bún,bò tươi</div>
+                    <div class="price">40000VND </div>
+                </div>
+            </ul>
+            <div class="list-page">
+                <div class="item">
+                    <a href="">1</a>
+                </div>
+                <div class="item">
+                    <a href="">2</a>
+                </div>
+                <div class="item">
+                    <a href="">3</a>
+                </div>
+                <div class="item">
+                    <a href="">4</a>
+                </div>
+
+            </div>
+        </div>
+        <div id="saleoff">
+            <div class="box-left">
+                <h1>
+                    <span> GIẢM GIÁ</span>
+                    <span>20%</span>
+                </h1>
+            </div>
+            <div class="box-right">
+
+            </div>
+        </div>
+        <div id="comment">
+            <h2>NHẬN XÉT CỦA KHÁCH HÀNG </h2>
+            <div id="comment-body">
+                <div class="prev">
+                    <a href="#">
+                        <img src="../images/m1.png" alt="">
+
+                    </a>
+                </div>
+                <ul id="list-comment">
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="../images/a12.png" alt="" class="tall1">
+                        </div>
+                        <div class="name">NGUYỄN THỊ HIỀN</div>
+                        <div class="text">
+                            <p>
+                                Thật bất ngờ khi tìm được viên ngọc này ngay cạnh Bảo tàng Chứng tích Chiến tranh.
+                                Món dùng thật tuyệt vời, dịch vụ hoàn hảo và mọi người ở đây rất tử tế - bầu không
+                                khí siêu thư giãn. Một nơi thật kỳ diệu được bao phủ bởi màu xanh. Nơi nhất định phải
+                                thử!
+                            </p>
+
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="../images/a12.png" alt="" class="tall1">
+                        </div>
+                        <div class="name">ĐOÀN TUẤN ĐẠT</div>
+                        <div class="text">
+                            <p>
+                                Một nhà hàng đẹp nằm ở vị trí rất thuận tiện. Quản lý rất nhiệt tình. Trước khi vào nhà
+                                hàng, tôi bị mắc kẹt trong cơn mưa lớn và quản lý đã giúp tôi làm khô ráo. Món dùng rất
+                                tuyệt vời, được trình bày đẹp mắt và rất ngon miệng. Đồ uống sáng tạo và sảng khoái. Món
+                                tráng miệng xuất sắc.
+                            </p>
+
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="../images/a12.png" alt="" class="tall1">
+                        </div>
+                        <div class="name">LÊ ĐÌNH THẮNG </div>
+                        <div class="text">
+                            <p>
+                                Món dùng cực kỳ ngon, nhân viên thân thiện! Chúng tôi được diễn giải về từng món ăn và
+                                cách
+                                thưởng thức. Họ dành thời gian để trò chuyện cùng chúng tôi làm khoảng thời gian ở đây
+                                trở
+                                nên thật dễ chịu. Đồ uống cũng rất ngon! Giá hơi cao nhưng nhất định tôi sẽ quay lại
+                                sớm.
+                            </p>
+
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="next">
+                    <a href="#">
+                        <img src="../images/m2.png" alt="">
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div id="footer">
+            <div class="box">
+                <div class="logo"><img src="../images/logo1.png" alt=""> </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách </p>
+
+            </div>
+            <div class="box">
+                <h3> Thông Tin</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">tel:0965274564</a>
+                    </div>
+                    <div class="item">
+                        <a href="">adress:số 18,phố Tạ Quang Bửu</a>
+                    </div>
+                    <div class="item">
+                        <a href="">FaceBook </a>
+                    </div>
+                </ul>
+
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Địa chỉ mail">
+                    <button>Gửi tin</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="wraper" style="height:200px;width:300px ;display: none;z-index:9999;position: fixed;
+    top: 80px;
+    left: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" id="chatBox">
+        <section>
+            <header  style="background-color: orange; border-radius: 2px; height: 40px; position: relative;">
+                <div >
+                    <img  style="height:20px; width:20px ;border-radius:50%; margin-top:10px;margin-left:20px"    src="https://tse4.mm.bing.net/th?id=OIP.kQyrx9VbuWXWxCVxoreXOgHaHN&pid=Api&P=0&h=180" atl="">
+                    <span style="margin-bottom: 5px;color:white;">Admin</span>
+                    <i id="closeChat" style="position: absolute; top: 0; right: 0; margin-top: 10px; margin-right: 10px; cursor: pointer;" class="fa-solid fa-xmark"></i>
+
+                </div>
+            </header>
+            <div class="chat-box">
+                <div class="chat outgoing">
+                    <div class="details">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class=" chat incoming">
+                    <div class="details">
+                        <p>hi</p>
+                    </div>
+                </div>
+            </div>
+            <form action="#" class="typing-area" style="background-color: orange;border-radius: 3px;">
+                <input type="text " name="incoming_id" class="incoming_id" id="" hidden>
+                <input type="text" name="message" class="input-field " placeholder="nhập nội dung">
+                <button>
+                    <i class="fab fa-telegram-plane"></i>
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script type="text/javascript" src="../js/logout.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const showChatButton = document.getElementById('showChat');
+  const closeChatIcon = document.getElementById('closeChat');
+  const chatBox = document.getElementById('chatBox');
+
+  // Toggle chat box display on button click
+  showChatButton.addEventListener('click', function() {
+    if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+      chatBox.style.display = 'block';
+    } else {
+      chatBox.style.display = 'none';
+    }
+  });
+  closeChatIcon.addEventListener('click', function() {
+    chatBox.style.display = 'none';
+  });
+});
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const showChatButton = document.getElementById('showChat');
+  const closeChatIcon = document.getElementById('closeChat');
+  const chatBox = document.getElementById('chatBox');
+
+  // Toggle chat box display on button click
+  showChatButton.addEventListener('click', function() {
+    if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+      chatBox.style.display = 'block';
+    } else {
+      chatBox.style.display = 'none';
+    }
+  });
+  closeChatIcon.addEventListener('click', function() {
+    chatBox.style.display = 'none';
+  });
+});
+    </script>
+</body>
+
+</html>

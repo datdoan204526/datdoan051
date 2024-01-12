@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="mdl-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <title>Dashboard</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/lienhe1.css">
+  <link rel="stylesheet" href="/css/nhanvien.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Đạt food</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="/admin/login">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="/admin/dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-home">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                Dashboard <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/donhang">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-file">
+                  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                  <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+                Đơn Hàng
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/sanpham">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-shopping-cart">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Sản Phẩm
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/khachhang">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-users">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Khách Hàng
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/lienhe">
+                <i class="fa-regular fa-comment"></i>
+                Đánh giá
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/nhanvien">
+                <i class="fa-regular fa-user"></i>
+                nhân viên
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/hoadon">
+                <i class="fa-solid fa-money-bill"></i>
+                hóa đơn
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/tinnhan">
+                  <i class="fa-brands fa-facebook-messenger"></i>
+                  Tin nhắn khách hàng
+                </a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 border" style="background-color: #f8f9fa;">
+        <div class="container1" style="background-color:white">
+          <div style="display:flex; justify-content:space-between;">
+            <button type="button" class="btn btn-primary button1" onclick="location.reload()">
+              <i class="fa-solid fa-rotate-right"></i>
+              Tải lại
+            </button>
+            <button type="button" class="btn btn-primary" style="height: 45px; margin-top: 15px; margin-right: 10px;" id="showFormBtn" >
+              + Thêm nhân viên
+            </button>
+            <form method="POST" action="/admin/addWorker" id="addWorkerForm" class="add-form"  style="display: none;">
+              <div class="row1">
+                <div>
+                  <div class="form-group">
+                    <label for="form-add_email">Email:</label>
+                    <input type="text" id="form-add_email" name="email" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="form-add_chucvu">Chức vụ:</label>
+                    <input type="text" id="form-add_chucvu" name="chucvu" class="form-control" required>
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="form-add_password">Password:</label>
+                    <input type="password" id="form-add_password" name="password" class="form-control" required>
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="form-add_name">Name:</label>
+                    <input type="text" id="form-add_name" name="name" class="form-control" required>
+                  </div>
+                </div>
+                <div>
+                  <div class="form-group">
+                    <label for="form-add_phone">SĐT:</label>
+                    <input type="text" id="form-add_phone" name="phone" class="form-control" required>
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="form-add_ngaysinh">Ngày Sinh:</label>
+                    <input type="text" id="form-add_ngaysinh" name="ngaysinh" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="form-add_diachi">Địa chỉ:</label>
+                    <input type="text" id="form-add_diachi" name="diachi" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="form-add_gioitinh">Giới Tính:</label>
+                    <input type="text" id="form-add_gioitinh" name="gioitinh" class="form-control" required>
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="form-add_kichhoat">Kích Hoạt:</label>
+                    <select id="form-add_kichhoat" name="kichhoat" class="form-control" required>
+                      <option>1</option>
+                      <option>0</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Lưu</button>
+              <button type="button"  class="btn btn-danger close-form">Đóng</button>
+            </form>
+            
+          </div>
+          <table class="table table1 table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Mã</th>
+                <th scope="col">Họ và Tên</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Ngày sinh</th>
+                <th scope="col">Giới tính</th>
+                <th scope="col">Email</th>
+                <th scope="col">Chức vụ</th>
+                <th scope="col">Kích hoạt</th>
+                <th scope="col">Tác vụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let i=0; i < workers.length; i++) { %>
+                <tr>
+                  <th scope="row">
+                    <%= i + 1 %>
+                  </th>
+                  <td>
+                    <%= workers[i].name %>
+                  </td>
+                  <td>
+                    <%= workers[i].diachi %>
+                  </td>
+                  <td>
+                    <%= workers[i].phone %>
+                  </td>
+                  <td>
+                    <%= workers[i].ngaysinh %>
+                  </td>
+                  <td>
+                    <%= workers[i].gioitinh %>
+                  </td>
+                  <td>
+                    <%= workers[i].email %>
+                  </td>
+                  <td>
+                    <%= workers[i].chucvu %>
+                  </td>
+                 
+                  <td>
+                    <% if (workers[i].kichhoat == '0') { %>
+                      <a style="color:blue;" data-workerid="<%= workers[i]._id %>">
+                        <i class="fa-solid fa-toggle-off icon1 switchToggle"></i>
+                      </a>
+                    <% } else if (workers[i].kichhoat == '1') { %>
+                      <a style="color:blue;" data-workerid="<%= workers[i]._id %>">
+                        <i class="fa-solid fa-toggle-on icon1 switchToggle"></i>
+                      </a>
+                    <% } %>
+                  </td>
+                  
+
+
+                  <td>
+                    <div style="display:flex;">
+                      <a class="icon_color1 delete-link" href="#" data-user="<%= workers[i]._id %>"><i class="fa-solid fa-trash-can icon2"></i></a>
+                      <a class="icon_color2 open-update-form" href="#" data-user-id="<%= workers[i]._id%>"  ><i class="fa-solid fa-pen-to-square icon3"></i></a>
+                    </div>
+                    <div class="confirmation-dialog" id="confirmation-dialog">
+                      <div class="confirmations-content">
+                          <p>Bạn có chắc chắn muốn xóa?</p>
+                          <button class="confirm-button">OK</button>
+                          <button class="cancel-button">Cancel</button>
+                      </div>
+                  </div>
+                  <form method="POST" action="/admin/updateWorker/<%= workers[i]._id %>" class="update-form"
+                    id="form_<%= workers[i]._id %>" style="display: none;">
+                <div class="row1">
+                  <div>
+                    <div class="form-group">
+                      <label for="form-update_email">Email:</label>
+                      <input type="text" id="form-update_email" name="email" class="form-control"
+                             value="<%= workers[i].email %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="form-update_chucvu">Chức vụ:</label>
+                      <input type="text" id="form-update_chucvu" name="chucvu" class="form-control"
+                             value="<%= workers[i].chucvu %>" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="form-update_password">Password:</label>
+                      <input type="password" id="form-update_password" name="password" class="form-control"
+                             value="<%= workers[i].password %>" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="form-update_name">Name:</label>
+                      <input type="text" id="form-update_name" name="name" class="form-control"
+                             value="<%= workers[i].name %>" required>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="form-group">
+                      <label for="form-update_phone">SĐT:</label>
+                      <input type="text" id="form-update_phone" name="phone" class="form-control"
+                             value="<%= workers[i].phone %>" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="form-update_ngaysinh">Ngày Sinh:</label>
+                      <input type="text" id="form-update_ngaysinh" name="ngaysinh" class="form-control"
+                             value="<%= workers[i].ngaysinh %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="form-update_diachi">Địa chỉ:</label>
+                      <input type="text" id="form-update_diachi" name="diachi" class="form-control"
+                             value="<%= workers[i].diachi %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="form-update_gioitinh">Giới Tính:</label>
+                      <input type="text" id="form-update_gioitinh" name="gioitinh" class="form-control"
+                             value="<%= workers[i].gioitinh %>" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="form-update_kichhoat">Kích Hoạt:</label>
+                      <select id="form-update_kichhoat" name="kichhoat" class="form-control"
+                              value="<%= workers[i].kichhoat %>" required>
+                        <option >1</option>
+                        <option >0</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              
+                <button type="submit" class="btn btn-primary">Lưu</button>
+                <button type="button" class="btn btn-danger close-form">Đóng</button>
+              </form>
+              
+                  </td>
+                </tr>
+                <% } %>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/jquery-slim.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Lấy tất cả các switch
+      var switchToggles = document.querySelectorAll('.switchToggle');
+      console.log(switchToggles)
+  
+      // Thêm sự kiện click cho mỗi switch
+      switchToggles.forEach(function (switchToggle) {
+        switchToggle.addEventListener('click', function (event) {
+          console.log('Click event triggered!');
+          // Lấy ID của nhân viên từ thuộc tính data-workerid
+          const workerId = switchToggle.getAttribute('data-workerid');
+          console.log(workerId)
+  
+          // Gửi yêu cầu cập nhật đến endpoint API
+          fetch('/admin/updateKichHoat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              id: workerId,
+              kichhoat: switchToggle.classList.contains('fa-toggle-off') ? '1' : '0',
+            }),
+          })
+            .then(response => response.json())
+            .then(data => {
+              if (data.success) {
+                // Cập nhật giao diện người dùng nếu cập nhật cơ sở dữ liệu thành công
+                switchToggle.classList.toggle('fa-toggle-off');
+                switchToggle.classList.toggle('fa-toggle-on');
+              } else {
+                console.error('Lỗi khi cập nhật cơ sở dữ liệu:', data.error);
+              }
+            })
+            .catch(error => {
+              console.error('Lỗi khi gửi yêu cầu cập nhật:', error);
+            });
+        });
+      });
+    });
+  </script>
+  <script>
+    // Xử lý khi nhấn vào biểu tượng "Update"
+    document.querySelectorAll('.open-update-form').forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            // Ngăn chuyển hướng mặc định của thẻ 'a'
+            event.preventDefault();
+
+            // Ẩn tất cả các form sửa thông tin khác (nếu có)
+            document.querySelectorAll('.update-form').forEach(function (form) {
+                form.style.display = 'none';
+            });
+
+            // Hiển thị form sửa thông tin tương ứng
+            var userId = this.getAttribute('data-user-id');
+
+            document.querySelector('.update-form[id="form_' + userId + '"]').style.display = 'block';
+            console.log(document.querySelector('.update-form[id="form_' + userId + '"]').style.display = 'block');
+        });
+    });
+
+    // Xử lý khi nhấn vào biểu tượng "Close"
+    document.querySelectorAll('.close-form').forEach(function (closeButton) {
+        closeButton.addEventListener('click', function () {
+            // Đóng form
+            this.closest('.update-form').style.display = 'none';
+        });
+    });
+</script>
+  <!-- <script>
+    // Xử lý khi nhấn vào biểu tượng "Update"
+    document.querySelectorAll('.open-update-form').forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            // Ngăn chuyển hướng mặc định của thẻ 'a'
+            event.preventDefault();
+
+            // Ẩn tất cả các form sửa thông tin khác (nếu có)
+            document.querySelectorAll('.update-form').forEach(function (form) {
+                form.style.display = 'none';
+            });
+
+            // Hiển thị form sửa thông tin tương ứng
+            var userId = this.getAttribute('data-user-id');
+
+            document.querySelector('.update-form[id="form_' + userId + '"]').style.display = 'block';
+            console.log(document.querySelector('.update-form[id="form_' + userId + '"]').style.display = 'block');
+        });
+    });
+
+    // Xử lý khi nhấn vào biểu tượng "Close"
+    document.querySelectorAll('.close-form').forEach(function (closeButton) {
+        closeButton.addEventListener('click', function () {
+            // Đóng form
+            this.closest('.update-form').style.display = 'none';
+        });
+    });
+</script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    document.querySelectorAll('.delete-link').forEach(function (deleteLink) {
+        deleteLink.addEventListener('click', function (event) {
+            event.preventDefault(); // Ngăn chuyển hướng mặc định của liên kết
+
+            var userId = this.getAttribute('data-user');
+            var confirmationDialog = document.getElementById('confirmation-dialog');
+
+            // Hiển thị hộp thoại xác nhận
+            confirmationDialog.style.display = 'block';
+
+            // Xử lý nút "OK"
+            confirmationDialog.querySelector('.confirm-button').addEventListener('click', function () {
+                // Người dùng đã xác nhận muốn xóa
+                // Gửi POST request tới URL /admin/deleteUser/<userId> bằng JavaScript
+                fetch('/admin/deleteWorker/' + userId, {
+                    method: 'POST',
+                }).then(function (response) {
+                    // Xử lý phản hồi từ máy chủ sau khi hoàn thành
+                    if (response.ok) {
+                        // Xóa người dùng thành công, có thể cập nhật giao diện người dùng tại đây nếu cần
+                        console.log('Người dùng đã bị xóa.');
+                    } else {
+                        // Xử lý lỗi nếu cần
+                        console.error('Đã xảy ra lỗi khi xóa người dùng.');
+                        console.log(userId)
+                    }
+                }).catch(function (error) {
+                    // Xử lý lỗi nếu có lỗi trong quá trình gửi request
+                    console.error('Lỗi kết nối đến máy chủ: ' + error.message);
+                });
+
+                // Ẩn hộp thoại xác nhận
+                confirmationDialog.style.display = 'none';
+            });
+
+            // Xử lý nút "Cancel"
+            confirmationDialog.querySelector('.cancel-button').addEventListener('click', function () {
+                // Người dùng đã huỷ bỏ xóa
+                console.log('Người dùng đã huỷ bỏ xóa.');
+
+                // Ẩn hộp thoại xác nhận
+                confirmationDialog.style.display = 'none';
+            });
+        });
+    });
+</script>
+<script>
+  // Lấy tham chiếu đến nút "Thêm nhân viên"
+  const showFormBtn = document.getElementById('showFormBtn');
+
+  // Lấy tham chiếu đến form "Thêm nhân viên"
+  const addWorkerForm = document.getElementById('addWorkerForm');
+
+  // Gán sự kiện khi click vào nút "Thêm nhân viên"
+  showFormBtn.addEventListener('click', () => {
+    // Hiển thị form bằng cách thêm lớp "show" (hoặc sử dụng style.display = 'block')
+    addWorkerForm.style.display = 'block';
+  });
+
+  // Hàm đóng form
+  document.querySelectorAll('.close-form').forEach(function (closeButton) {
+        closeButton.addEventListener('click', function () {
+            // Đóng form
+            this.closest('.add-form').style.display = 'none';
+        });
+      });
+</script>
+  
+  
+  
+</body>
+
+</html>

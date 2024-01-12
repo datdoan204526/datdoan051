@@ -1,0 +1,471 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+
+}
+
+#header {
+    width: 100%;
+    padding: 0px 30px;
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu .item {
+    margin: 0px 25px;
+}
+
+#menu .item a {
+    color: #626A67;
+    text-decoration: none;
+}
+
+#menu .item a:hover {
+    color: orange;
+}
+
+#actions {
+    display: flex;
+
+}
+
+#actions .item {
+    margin-left: 30px;
+
+}
+#actions .item a{
+    color:black;
+}
+
+
+#actions .item a:hover {
+    color: orange;
+    /* Tùy chọn: Đặt màu chữ khi rê chuột qua */
+}
+
+
+#banner {
+    width: 100%;
+    background-image: url("../images/abc.png");
+    height: 463px;
+    margin-top: 40px;
+    display: flex;
+    padding: 0px 133px;
+    position: relative;
+    background-size: cover;
+    /* Đảm bảo rằng hình ảnh sẽ không bị lặp lại */
+    background-repeat: no-repeat;
+    /* Căn giữa hình ảnh trong phần tử #banner */
+    background-position: center;
+
+}
+
+/* #banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Đặt màu đen với độ trong suốt 0.5 */
+
+
+#banner .box-left,
+#banner.box-right {
+    width: 50%;
+
+}
+
+#banner .box-left h2 {
+    font-size: 48px;
+    margin-top: 75px;
+    color: #fff;
+}
+
+#banner .box-left p {
+    color: #D0D0D0;
+}
+
+#banner .box-left button {
+    width: 191px;
+    height: 40px;
+    margin-top: 41px;
+    background: #1d1a1a;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+#banner .box-left button:hover {
+    background: orange;
+
+}
+
+#banner .box-right {
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-short {
+    height: 200px;
+    margin: 0 5px;
+    /* Khoảng cách giữa các ảnh */
+}
+
+.img-tall {
+    height: 280px;
+    margin: 0 5px;
+    /* Khoảng cách giữa các ảnh */
+}
+
+#banner .box-right img {
+    width: 80px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    animation: animation 3s infinite linear;
+
+
+}
+
+#banner .box-right img:nth-child(1) {
+    animation-delay: 0, 5s;
+}
+
+#banner .box-right img:nth-child(1) {
+    animation-delay: 1s;
+}
+
+@keyframes animation {
+    0% {
+
+        transform: translateY(0px);
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+    }
+
+    100% {
+
+        transform: translateY(0px);
+    }
+
+}
+
+.to-bottom {
+    position: absolute;
+    color: red;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#wp-products {
+    padding-top: 116px;
+    padding-bottom: 78px;
+    padding-left: 134px;
+    padding-right: 134px;
+}
+
+#wp-products h2 {
+    text-align: center;
+    margin-bottom: 76px;
+    font-size: 32px;
+    color: #626a67;
+}
+
+#list-products {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#list-products .item {
+    position:relative;
+    width: 300px;
+    height: 350px;
+    background: #362f2f;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    transition:top linear 0.1s;
+    top:0;
+}
+
+#list-products .item:hover {
+    top: -6px;
+}
+
+
+
+#list-products .item img {
+    display: block;
+    margin: 0px auto;
+    margin-top: 17px;
+
+
+}
+
+#list-products .item .name {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 21px;
+
+}
+
+#list-products .item .desc {
+    text-align: center;
+    color: #626a67;
+}
+
+#list-products .item .price {
+    text-align: center;
+    color: #f42424;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.list-page {
+    width: 50%;
+    margin: 0px auto;
+
+}
+
+.list-page {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-page .item {
+    margin: 0px 20px;
+    width: 37px;
+    height: 37px;
+    background: #362f2f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.list-page .item a {
+    color: #fff;
+    text-decoration: none;
+}
+.list-page .item:hover{
+    background-color:orange;
+}
+
+#contact {
+    width: 35%;
+    display: flex;
+}
+
+#contact .box-left{
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contact .box-right {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact .box-left {
+    /* background: #3e413e; */
+    text-align: center;
+    min-height: 322px;
+
+}
+
+#contact .box-left h1 {
+    padding-top: 38px;
+}
+
+#contact .box-left span:nth-child(1) {
+    /* color: #fff; */
+    font-size: 50px;
+}
+
+#contact .box-left span:nth-child(2) {
+    /* color: orange; */
+    font-size: 128px;
+}
+
+#contact .box-right {
+    background-repeat: no-repeat;
+    /* Căn giữa hình ảnh trong phần tử #banner */
+    background-position: center;
+}
+
+#comment {
+    width: 1012px;
+    height: 478px;
+    margin: 0px auto;
+    margin-top: 184px;
+    margin-bottom: 50px;
+}
+
+#comment h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #626a67;
+}
+
+#comment-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 350px;
+    list-style: none;
+    overflow: hidden;
+
+}
+
+#list-comment {
+    width: 100%;
+    height: 100%;
+    background: #362f2f;
+    border-radius: 20px;
+    padding-top: 50px;
+
+}
+
+#list-comment .item {
+    width: 100%;
+    height: 100%;
+    background: #362f2f;
+    border-radius: 20px;
+    padding-top: 50px;
+
+}
+
+.tall1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#list-comment .item .avatar {
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 13px
+}
+
+#list-comment .item .name {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+#list-comment .item .text {
+    padding: 0px 50px;
+    color: #fff;
+
+}
+
+#footer {
+    width: 100%;
+    background: rgb(0, 0, 0, 0.79);
+    height: 322px;
+    margin-top: 100px;
+    padding: 0px 63px;
+    padding-top: 57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box {
+    width: 250px;
+    color: #fff;
+
+
+}
+
+#footer .box .quick-menu {
+    margin-top: 40px;
+}
+
+#footer .box .quick-menu .item {
+    margin-bottom: 12px;
+}
+
+#footer .box .quick-menu,
+.item a {
+    color: #fff;
+    text-decoration: none;
+}
+#footer .box .quick-menu,
+.item a:hover {
+    color:orange;
+}
+
+#footer .box form input {
+    width: 294px;
+    height: 42px;
+    background: transparent;
+    padding-left: 20px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+#footer .box form button {
+    background: #362f2f;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 25);
+    width: 163px;
+    height: 38px;
+    margin-top: 29px;
+    color: #fff;
+}
+.container_lienhe{
+    display:flex;
+}
+.container1{
+    margin-top: 40px;
+}
+.container2{
+    margin-top: 10px;
+
+}
+.container3{
+    margin-top: 10px;
+
+}
+.vitri{
+    margin-top: 4px;
+}
+.vitri1{
+    margin-left: 3px;
+}

@@ -1,0 +1,212 @@
+.icon1{
+    margin-left: 13px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.icon2
+{
+  margin-top:15px;
+
+}
+.icon3{
+  margin-top:15px;
+  margin-left: 10px;
+}    
+.icon_color1{
+color:red;
+}
+.icon_color1:hover{
+color:brown;
+}
+.close-form {
+  color: #ff0000;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.confirmation-dialog {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 45%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmations-content {
+  background-color:#f2f2f2;
+  padding: 10px;
+  border-radius: 20px;
+  border-color: white;
+  text-align: center;
+}
+
+.confirm-button {
+  background-color:#007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.confirm-button:hover{
+  background-color: rgb(81, 0, 255);
+}
+.cancel-button:hover{
+  background-color: rgb(81, 0, 255);
+}
+.update-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+  margin: 0 auto; /* Căn giữa nội dung trong form */
+}
+
+.update-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.update-form input[type="text"],
+.update-form input[type="password"] {
+  width: calc(100% - 20px); /* Chiều rộng 100% với lề 10px ở mỗi bên */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form button[type="submit"],
+.update-form button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.row1{
+  display:flex;
+}
+.add-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+  margin: 0 auto; /* Căn giữa nội dung trong form */
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-form input[type="text"],
+.add-form input[type="password"] {
+  width: calc(100% - 20px); /* Chiều rộng 100% với lề 10px ở mỗi bên */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-form button[type="submit"],
+.add-form button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.update-form2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+  margin: 0 auto; /* Căn giữa nội dung trong form */
+}
+
+.update-form2 label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.update-form2 input[type="text"],
+.update-form2 input[type="password"] {
+  width: calc(100% - 20px); /* Chiều rộng 100% với lề 10px ở mỗi bên */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form2 select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form2 button[type="submit"],
+.update-form2 button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

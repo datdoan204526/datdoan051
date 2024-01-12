@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>now food</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/gioithieu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+</head>
+<body>
+    <div id="header">
+        <a href="" class="logo">
+            <img src="../images/logo1.png" alt="">
+        </a>
+        <div id="menu">
+            <div class="item">
+
+                <a href="/user/home">Trang chủ</a>
+            </div>
+            <% if(user.length){ %>
+            <div class="item">
+                <a href="/user/gioithieu">Giới Thiệu </a>
+            </div>
+            <div class="item">
+                <a href="/user/sanpham">Sản Phẩm</a>
+            </div>
+            <div class="item">
+                <a href="/user/lienhe">Liên hệ </a>
+            </div>
+            <div class="item">
+                <a href="/user/status">status </a>
+            </div>
+        </div>
+        <div id="actions">
+            <div class="item">
+                <a href="/user/cart" ><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="item">
+                <a href="/user/lichsu"><i class="fa-regular fa-file"></i></a>
+            </div>
+            <div class="item">
+                <a href="#" id="showChat"> <i class="fa-brands fa-facebook-messenger"></i></a>
+            </div>
+            <div class="item">
+                <a href="/user/hoso" ><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+            <div class="item">
+                <a href="/user/login" id="logoutLink" ><i class="fa-solid fa-arrow-right-from-bracket"></i></i></a>
+            </div>
+            <div id="logoutConfirmation" class="confirmation">
+                <p>Bạn có chắc chắn muốn đăng xuất?</p>
+                <button id="confirmLogout">Đồng ý</button>
+                <button id="cancelLogout">Hủy</button>
+            </div>
+        </div>
+        <%  } else { %>
+            <div class="item">
+                <a href="/user/gioithieu">Giới Thiệu </a>
+            </div>
+        </div>
+            <div id="actions">
+                <div class="item">
+                    <a href="/user/login" >đăng nhập </i></a>
+                </div>
+                <div class="item">
+                    <a href="/user/dangki" >đăng kí</i></a>
+                </div>
+                
+            </div>
+        <% } %>
+
+    </div>
+    <div class="text">
+        <h1 >
+            Lời Giới Thiệu
+        </h1>
+       <p>
+        Chào mừng bạn đến với Đạt Food, nơi mang đến trải nghiệm ẩm thực sáng tạo và tinh tế cho mọi người yêu thích ăn sáng. Tại đây, chúng tôi không chỉ cung cấp những món ăn ngon miệng, mà còn tạo nên không khí ấm cúng, làm cho mỗi bữa ăn trở thành một trải nghiệm tận hưởng đặc biệt.
+
+Quán ăn sáng của chúng tôi tự hào với đội ngũ đầu bếp tài năng, luôn sáng tạo và tận tâm trong mỗi chi tiết. Thực đơn đa dạng từ những món ăn truyền thống cho đến những sáng tạo mới, đảm bảo đáp ứng đa dạng khẩu vị của khách hàng. Chúng tôi chú trọng vào việc sử dụng nguyên liệu tươi ngon, đảm bảo chất lượng và hương vị tốt nhất.
+
+Không chỉ là nơi để bắt đầu ngày mới với những bữa sáng dinh dưỡng, quán ăn của chúng tôi còn là không gian lý tưởng để gặp gỡ bạn bè, đồng nghiệp, hoặc thưởng thức một bữa trưa nhẹ nhàng. Không gian thoải mái và phục vụ tận tâm là cam kết của chúng tôi để mang lại trải nghiệm ẩm thực trọn vẹn nhất cho quý khách.
+
+Hãy đến và cùng Đạt Food chia sẻ niềm đam mê ẩm thực và tận hưởng những khoảnh khắc ngon miệng tại quán. Chúng tôi luôn sẵn sàng chào đón và phục vụ bạn mỗi ngày!
+
+
+       </p>
+    </div>
+    <div id="footer">
+        <div class="box">
+            <div class="logo"><img src="../images/logo1.png" alt=""> </div>
+            <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách </p>
+
+        </div>
+        <div class="box">
+            <h3> Thông Tin</h3>
+            <ul class="quick-menu">
+                <div class="item">
+                    <a href="">tel:0965274564</a>
+                </div>
+                <div class="item">
+                  <a href="">adress:số 18,phố Tạ Quang Bửu</a>
+                </div>
+                <div class="item">
+                    <a href="">FaceBook </a>
+                </div>
+            </ul>
+            
+        </div>
+        <div class="box">
+            <h3>LIÊN HỆ</h3>
+            <form action="">
+                <input type="text" placeholder="Địa chỉ mail">
+                <button>Gửi tin</button>
+            </form>
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="wraper" style="height:200px;width:300px ;display: none;z-index:9999;position: fixed;
+    top: 80px;
+    left: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" id="chatBox">
+        <section>
+            <header  style="background-color: orange; border-radius: 2px; height: 40px; position: relative;">
+                <div >
+                    <img  style="height:20px; width:20px ;border-radius:50%; margin-top:10px;margin-left:20px"    src="https://tse4.mm.bing.net/th?id=OIP.kQyrx9VbuWXWxCVxoreXOgHaHN&pid=Api&P=0&h=180" atl="">
+                    <span style="margin-bottom: 5px;color:white;">Admin</span>
+                    <i id="closeChat" style="position: absolute; top: 0; right: 0; margin-top: 10px; margin-right: 10px; cursor: pointer;" class="fa-solid fa-xmark"></i>
+
+                </div>
+            </header>
+            <div class="chat-box">
+                <div class="chat outgoing">
+                    <div class="details">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class=" chat incoming">
+                    <div class="details">
+                        <p>hi</p>
+                    </div>
+                </div>
+            </div>
+            <form action="#" class="typing-area" style="background-color: orange;border-radius: 3px;">
+                <input type="text " name="incoming_id" class="incoming_id" id="" hidden>
+                <input type="text" name="message" class="input-field " placeholder="nhập nội dung">
+                <button>
+                    <i class="fab fa-telegram-plane"></i>
+                </button>
+            </form>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const showChatButton = document.getElementById('showChat');
+  const closeChatIcon = document.getElementById('closeChat');
+  const chatBox = document.getElementById('chatBox');
+
+  // Toggle chat box display on button click
+  showChatButton.addEventListener('click', function() {
+    if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+      chatBox.style.display = 'block';
+    } else {
+      chatBox.style.display = 'none';
+    }
+  });
+  closeChatIcon.addEventListener('click', function() {
+    chatBox.style.display = 'none';
+  });
+});
+    </script>
+<script type="text/javascript" src="../js/logout.js"></script>
+</body>

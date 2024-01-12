@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>now food</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/sanpham.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
+
+<body>
+    <div id="header">
+        <a href="" class="logo">
+            <img src="../images/logo1.png" alt="">
+        </a>
+        <div id="menu">
+            <div class="item">
+
+                <a href="/user/home">Trang chủ</a>
+            </div>
+            <% if(user.length){ %>
+                <div class="item">
+                    <a href="/user/gioithieu">Giới Thiệu </a>
+                </div>
+                <div class="item">
+                    <a href="/user/sanpham">Sản Phẩm</a>
+                </div>
+                <div class="item">
+                    <a href="/user/lienhe">Liên hệ </a>
+                </div>
+                <div class="item">
+                    <a href="/user/status">status </a>
+                </div>
+        </div>
+        <div id="actions">
+            <div class="item">
+                <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="item">
+                <a href="/user/lichsu"><i class="fa-regular fa-file"></i></a>
+            </div>
+            <div class="item">
+                <a href="#" id="showChat"> <i class="fa-brands fa-facebook-messenger"></i></a>
+            </div>
+            <div class="item">
+                <a href="/user/hoso"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+            <div class="item">
+                <a href="/user/login" id="logoutLink"><i class="fa-solid fa-arrow-right-from-bracket"></i></i></a>
+            </div>
+            <div id="logoutConfirmation" class="confirmation">
+                <p>Bạn có chắc chắn muốn đăng xuất?</p>
+                <button id="confirmLogout">Đồng ý</button>
+                <button id="cancelLogout">Hủy</button>
+            </div>
+        </div>
+        <% } else { %>
+            <div class="item">
+                <a href="/user/gioithieu">Giới Thiệu </a>
+            </div>
+    </div>
+    <div id="actions">
+        <div class="item">
+            <a href="/user/login">đăng nhập </i></a>
+        </div>
+        <div class="item">
+            <a href="/user/dangki">đăng kí</i></a>
+        </div>
+
+    </div>
+    <% } %>
+
+        </div>
+        <div class="app_contenner">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class=" category__heading-icon fas fa-list"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item-active">
+                                    <a href="#" class="category-item__link" onclick="loadProducts('all')">Tất cả món ăn
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link" onclick="loadProducts('main')">Món ăn chính
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link" onclick="loadProducts('side')">Món ăn phụ
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link" onclick="loadProducts('drink')">Đồ uống </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+                    <div class="grid__column-10">
+                        <div class="search" style="border-radius: 6px;">
+                            <input type="text" id="searchInput" class="search-input" style="border-radius: 2px; border:2px solid rgba(224,168,0,.4);" placeholder="Nhập để tìm kiếm">
+                            <button class="search-btn" onclick="searchProducts()">
+                                <i class="fas fa-search search-icon"></i>
+                            </button>
+                        </div>
+                        <div class="product">
+                            <div class="grid__row " id="productContainer">
+                                <% for (let i=0; i < products.length; i++) { %>
+                                    <div class="grid__column-3">
+                                        <div class="product-item" data-product-id="<%= products[i]._id %>">
+                                            <img class="product-item__img" src="<%= products[i].anh %>" alt="">
+                                            <h1 class="product-item__name">
+                                                <%= products[i].name %>
+                                            </h1>
+                                            <div class="product-item__price">
+                                                <%= products[i].gia %>VNĐ
+                                            </div>
+
+                                            <button class="product-item__button">Mua ngay</button>
+                                            <!-- Mã HTML cho form nhập số lượng -->
+                                            <div id="productInfo" style="display: none;">
+                                                <div class="row1">
+                                                    <div class="box-left1">
+                                                        <img id="productImg" class="product-item_img" src="" alt="">
+                                                    </div>
+                                                    <div class="box-right1">
+                                                        <div class="tieude">
+                                                            <h1 id="productName"></h1>
+                                                        </div>
+                                                        <p id="productDescription"></p>
+                                                        <p id="productPrice"></p>
+                                                        <label for="quantityInput">Số lượng:</label>
+                                                        <input type="number" id="quantityInput" min="1" value="1"
+                                                            class="input_cart">
+                                                        <button id="addToCartButton" class="button_cart">Thêm vào giỏ
+                                                            hàng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="product-item__sale-off">
+                                                <span class="product-item__sale-off__percent">10%</span>
+                                                <span class="product-item__sale-off__label">Giảm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="footer">
+            <div class="box">
+                <div class="logo"><img src="../images/logo1.png" alt=""> </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách </p>
+
+            </div>
+            <div class="box">
+                <h3> Thông Tin</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">tel:0965274564</a>
+                    </div>
+                    <div class="item">
+                        <a href="">adress:số 18,phố Tạ Quang Bửu</a>
+                    </div>
+                    <div class="item">
+                        <a href="">FaceBook </a>
+                    </div>
+                </ul>
+
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Địa chỉ mail">
+                    <button>Gửi tin</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div class="wraper" style="height:200px;width:300px ;display: none;z-index:9999;position: fixed;
+    top: 80px;
+    left: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" id="chatBox">
+        <section>
+            <header  style="background-color: orange; border-radius: 2px; height: 40px; position: relative;">
+                <div >
+                    <img  style="height:20px; width:20px ;border-radius:50%; margin-top:10px;margin-left:20px"    src="https://tse4.mm.bing.net/th?id=OIP.kQyrx9VbuWXWxCVxoreXOgHaHN&pid=Api&P=0&h=180" atl="">
+                    <span style="margin-bottom: 5px;color:white;">Admin</span>
+                    <i id="closeChat" style="position: absolute; top: 0; right: 0; margin-top: 10px; margin-right: 10px; cursor: pointer;" class="fa-solid fa-xmark"></i>
+
+                </div>
+            </header>
+            <div class="chat-box">
+                <div class="chat outgoing">
+                    <div class="details">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class=" chat incoming">
+                    <div class="details">
+                        <p>hi</p>
+                    </div>
+                </div>
+            </div>
+            <form action="#" class="typing-area" style="background-color: orange;border-radius: 3px;">
+                <input type="text " name="incoming_id" class="incoming_id" id="" hidden>
+                <input type="text" name="message" class="input-field " placeholder="nhập nội dung">
+                <button>
+                    <i class="fab fa-telegram-plane"></i>
+                </button>
+            </form>
+        </section>
+    </div>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/logout.js"></script>
+        <script type="text/javascript" src="../js/jquery-slim.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    const buyButtons = document.querySelectorAll('.product-item__button');
+    const quantityForm = document.getElementById('quantityForm');
+    const productInfoContainer = document.getElementById('productInfo');
+    let selectedProduct;
+
+    // Khai báo và gán giá trị cho biến products trong sự kiện DOMContentLoaded
+    fetch('/user/product')
+        .then(response => response.json())
+        .then(products => {
+            console.log(products);
+
+            buyButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const productId = button.closest('.product-item').dataset.productId;
+                    selectedProduct = products.find(product => product._id === productId);
+
+                    document.getElementById('productImg').src = selectedProduct.anh;
+                    document.getElementById('productName').innerText = selectedProduct.name;
+                    document.getElementById('productDescription').innerText = selectedProduct.moTa;
+                    document.getElementById('productPrice').innerText = `Giá bán: ${selectedProduct.gia} VNĐ`;
+
+                    productInfoContainer.style.display = 'block';
+                });
+            });
+        })
+        .catch(error => {
+            console.error('Lỗi khi truy vấn sản phẩm:', error);
+            // Xử lý lỗi theo nhu cầu
+        });
+
+    document.getElementById('addToCartButton').addEventListener('click', function () {
+        const quantity = document.getElementById('quantityInput').value;
+
+        // Sử dụng biến selectedProduct đã khai báo bên ngoài
+        addToCartOnServer(selectedProduct._id, quantity);
+
+        productInfoContainer.style.display = 'none';
+    });
+
+    // Hàm gọi API addToCart trên server
+    function addToCartOnServer(productId, quantity) {
+        // Sử dụng fetch hoặc các thư viện HTTP request khác để gọi API addToCart trên server
+        fetch('/user/addCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                productId: productId,
+                quantity: quantity,
+            }),
+        })
+            .then(response => response.json())
+            .then(result => {
+                // Xử lý kết quả từ server nếu cần
+                console.log(result);
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có
+                console.error('Lỗi khi gọi API addToCart:', error);
+            });
+    }
+});
+
+
+
+        </script>
+        <script>
+            function searchProducts() {
+    // Lấy giá trị từ ô nhập liệu
+    const productName = document.getElementById('searchInput').value;
+
+    // Gọi API tìm kiếm sản phẩm
+    fetch(`/user/search?productName=${productName}`)
+      .then(response => response.json())
+      .then(data => {
+        // Cập nhật giao diện với kết quả tìm kiếm
+        updateUI(data.result);
+      })
+      .catch(error => console.error('Lỗi khi gọi API:', error));
+  }
+
+  function updateUI(products) {
+    // Làm mới giao diện sản phẩm
+    const productContainer = document.querySelector('.product');
+    productContainer.innerHTML = '';
+
+    // Hiển thị sản phẩm tìm kiếm
+    products.forEach(product => {
+      const productItem = document.createElement('div');
+      productItem.className = 'grid__column-3 product-item';
+      productItem.setAttribute('data-product-id', product._id);
+
+      productItem.innerHTML = `
+    <img class="product-item__img" src="${product.anh}" alt="">
+    <h1 class="product-item__name">${product.name}</h1>
+    <div class="product-item__price">${product.gia}VNĐ</div>
+    <button class="product-item__button">Mua ngay</button>
+    
+    <div class="product-item__sale-off">
+
+        <span class="product-item__sale-off__percent">10%</span>
+        <span class="product-item__sale-off__label">Giảm</span>
+    </div>
+`;
+
+      productContainer.appendChild(productItem);
+    });
+  }
+        </script>
+        <script>
+            // Hàm JavaScript để tải và hiển thị sản phẩm dựa trên danh mục
+            function loadProducts(category) {
+              // Gọi hàm lấy sản phẩm theo danh mục
+              getProductsByCategory(category)
+                .then(products => {
+                  // Gọi hàm để hiển thị sản phẩm
+                  displayProducts(products);
+                })
+                .catch(error => {
+                  console.error('Error fetching products:', error);
+                });
+            }
+          
+            // Hàm JavaScript để hiển thị sản phẩm
+            function displayProducts(products) {
+              const productContainer = document.getElementById('productContainer');
+              productContainer.innerHTML = ''; // Xóa nội dung cũ
+          
+              // Lặp qua danh sách sản phẩm và hiển thị mỗi sản phẩm
+              for (let i = 0; i < products.length; i++) {
+                // HTML cho mỗi sản phẩm, tương tự như trong câu hỏi của bạn
+                const productHTML = `
+                <div class="grid__column-3">
+  <div class="product-item" data-product-id="${products[i]._id}">
+    <img class="product-item__img" src="${products[i].anh}" alt="${products[i].name}">
+    <h1 class="product-item__name">${products[i].name}</h1>
+    <div class="product-item__price">${products[i].gia} VNĐ</div>
+    
+    <button class="product-item__button" onclick="addToCart('${products[i]._id}', '${products[i].name}', '${products[i].gia}')">
+      Mua ngay
+    </button>
+
+    <div class="product-item__sale-off">
+      <span class="product-item__sale-off__percent">10%</span>
+      <span class="product-item__sale-off__label">Giảm</span>
+    </div>
+  </div>
+</div>
+
+                `;
+                // Thêm sản phẩm vào container
+                productContainer.innerHTML += productHTML;
+              }
+            }
+          
+            // Hàm JavaScript để lấy danh sách sản phẩm dựa trên danh mục
+            function getProductsByCategory(category) {
+              return fetch(`/user/products/${category}`)
+                .then(response => response.json());
+            }
+          </script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+      const showChatButton = document.getElementById('showChat');
+      const closeChatIcon = document.getElementById('closeChat');
+      const chatBox = document.getElementById('chatBox');
+    
+      // Toggle chat box display on button click
+      showChatButton.addEventListener('click', function() {
+        if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+          chatBox.style.display = 'block';
+        } else {
+          chatBox.style.display = 'none';
+        }
+      });
+      closeChatIcon.addEventListener('click', function() {
+        chatBox.style.display = 'none';
+      });
+    });
+        </script>
+
+</body>

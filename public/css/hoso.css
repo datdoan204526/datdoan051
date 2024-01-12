@@ -1,0 +1,97 @@
+.container{
+    background-color: #f2f2f2;
+    height:550px;
+    width:100%;
+}
+.abcd{
+    height:30px;
+    width:100%;
+}
+.container_hoso{
+    width:70%;
+    height:450px;
+    padding: 0 1.875rem 0.625rem;
+    background-color: white;
+    margin:auto;
+}
+.container_header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.tieude{
+    font-size: 1.5rem;
+}
+.row{
+    display:flex;
+    width:100%;
+    height:370px;
+
+}
+.container_thongtin{
+    box-sizing: border-box;
+    height:370px;
+    width:70%;
+    border-right: 2px solid #f2f2f2;
+
+}
+.table{
+   
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.table_tr{
+    margin-top: 30px;
+}
+.table_td1,
+.table_td2 {
+    padding: 15px; 
+}
+.container_chucnang{
+    width:30%;
+    height:370px;
+
+}
+.anh{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin-top: 80px;
+    margin-left: 115px;
+
+}
+.icon_sua{
+    margin-left: 115px;
+    margin-top:4px;
+    color:rgba(85,85,85,.8);
+}
+.button_thaydoi {
+    border: 0;
+    outline: none;
+    background: none;
+    color: #05a;
+    font-size: .8125rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+.button_thaydoi:hover{
+    color:black;
+}
+.a_sua{
+    color:rgba(85,85,85,.8);
+}
+.a_sua:hover{
+    color:black;
+
+}
+
+.row1{
+    display:flex;
+}
+.p_sua{
+    margin-left: 90px;
+}
+.vitri{
+    margin-right: 5px;
+}
